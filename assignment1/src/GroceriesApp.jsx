@@ -17,6 +17,13 @@ const [AddToCart, setProduct] = useState([])
 
     }
 
+    const DeleteProduct = (id) => {
+        setProduct((prevProduct) => {           
+            return setProduct.filter((i) => i.id !== id)
+    })
+
+    }
+
 
     //these will show what the functions are doing on the website from the other files
     return(

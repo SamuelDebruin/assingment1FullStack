@@ -7,9 +7,11 @@ export default function CartListContainer({shoppingCart}){
         <div className="CartList-Container">
             
             {shoppingCart.map((i) => (
-                    <CartList
+                <CartList
+                key = {i.id}
                 productName={i.productName}
                 price={i.price}
+                //onClick={onClick}
                 />
                 
             ))}
