@@ -8,8 +8,8 @@ import CartListContainer from "./CartListContainer";
 export default function GroceriesApp(){
 
 const [AddToCart, setProduct] = useState([])
-    function addList({AddToCart}){
-        return setProduct((prevProduct) => [...prevProduct,{...AddToCart, id: crypto.randomUUID()
+    function addList({productItem}){
+        return setProduct((prevProduct) => [...prevProduct,{...productItem, id: crypto.randomUUID()
             },
         ]); 
 
@@ -19,8 +19,8 @@ const [AddToCart, setProduct] = useState([])
 
     return(
         <div className= "GroceriesApp-Container">
-            <InventoryCardsContainer items = {products} AddToCart = {addList}/>
-            <CartListContainer shoppingcart = {AddToCart}/>
+            <InventoryCardsContainer items = {products} addList = {addList}/>
+            <CartListContainer shoppingCart = {AddToCart}/>
 
       </div>
         
