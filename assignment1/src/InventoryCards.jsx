@@ -1,6 +1,8 @@
-
+//creates a function
 export default function Inventory({productName, brand, quantity, image, price, addList}){
+    //makes a new array
     const AddToCart = {productName, price};
+    //will display all the fonts and images for each product on the website
     return(
         <div className="Inventory-Card">
             <img className="img" src={image} alt=""/>
